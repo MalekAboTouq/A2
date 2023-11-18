@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <title>Countries</title>
+
+</head>
+<body>
+    
+    <header class="header">
+        <div class="d-flex justify-content-between container">
+            <h1>Where in the world?</h1>
+
+            <button id="darkModeToggle" onclick="toggleDarkMode()">
+                <i class="fa-regular fa-moon"></i>
+                <span class="icon-text">Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="searchbar">
+        <div  class="d-flex justify-content-between container">
+            
+            <nav class="navbar navbar-light ">
+
+                <form class="form-inline">
+
+                    <div class="input-group">
+                                
+                            <div class="search-container">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                                
+                            <input type="text" class="form-control" placeholder="Search for a country..." aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </nav>
+                  
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter by Region
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                    <a class="dropdown-item" href="#">Africa</a>
+                    <a class="dropdown-item" href="#">America</a>
+                    <a class="dropdown-item" href="#">Asia</a>
+                    <a class="dropdown-item" href="#">Europe</a>
+                    <a class="dropdown-item" href="#">Oceania</a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <section class="countriesInfo">
+        <div class="countries">
+            <div class="container text-left">
+                <div class="row row-col-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <a href="country.html"><img src="assets/img/de.svg" alt=""></a>
+                                
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title"><a href="country.html">Germany</a></h2>
+                                <p><span class="bold">Population:</span> 81,770,900</p>
+                                <p><span class="bold">Region:</span> Europe</p>
+                                <p><span class="bold">Capital:</span> Berlin</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/us.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">United States Of America</h2>
+                                <p><span class="bold">Population:</span> 323,947,000</p>
+                                <p><span class="bold">Region:</span> Americas</p>
+                                <p><span class="bold">Capital:</span> Washington. D.C.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/br.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">Brazil</h2>
+                                <p><span class="bold">Population:</span> 206,135,893</p>
+                                <p><span class="bold">Region:</span> Americas</p>
+                                <p><span class="bold">Capital:</span> Brasilia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/is.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">Iceland</h2>
+                                <p><span class="bold">Population:</span> 334,300</p>
+                                <p><span class="bold">Region:</span> Europe</p>
+                                <p><span class="bold">Capital:</span> Reykjavik</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/af.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">Afghanistan</h2>
+                                <p><span class="bold">Population:</span> 27,657,145</p>
+                                <p><span class="bold">Region:</span> Asia</p>
+                                <p><span class="bold">Capital:</span> Kabul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/ax.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">Aland Island</h2>
+                                <p><span class="bold">Population:</span> 28,875</p>
+                                <p><span class="bold">Region:</span> Europe</p>
+                                <p><span class="bold">Capital:</span> Mariehamn</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+
+                            <div class="img-country">
+                                <img src="assets/img/al.svg" alt="">
+                            </div>
+        
+                            <div class="description">
+                                <h2 class="country-title">Albania</h2>
+                                <p><span class="bold">Population:</span> 2,886,026</p>
+                                <p><span class="bold">Region:</span> Europe</p>
+                                <p><span class="bold">Capital:</span> Tirana</p>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="country">
+                            <div class="img-country">
+                                <img src="assets/img/dz.svg" alt="">
+                            </div>
+                            <div class="description">
+                                <h2 class="country-title">Algeria</h2>
+                                <p><span class="bold">Population:</span> 40,400,000</p>
+                                <p><span class="bold">Region:</span> Africa</p>
+                                <p><span class="bold">Capital:</span> Algiers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            
+    </section>
+
+
+    <!-- for some bootstrab features -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
