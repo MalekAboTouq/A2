@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,800&display=swap');
 
-:root{
+:root {
     --light1: #fafafa;
     --light2: #ffffff;
     --background-dark: #202c37;
@@ -9,21 +9,27 @@
     --white: white;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.container{
+
+.container {
     margin: auto;
     padding: 0;
 }
 
-
-
+.row {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
 body {
     background-color: var(--light1);
@@ -38,74 +44,65 @@ body.dark-mode {
     --light1: #202c37;
     --background-dark: #121212;
     --text-dark: #ffffff;
-    --black: var(--white)
+    --black: var(--white);
 }
 
 .search-container button {
     padding: 20px 25px;
 }
 
-.header button{
+.header button {
     border: none;
     background-color: var(--light2);
 }
-
-
-
 
 .header {
     height: 20%;
     background-color: var(--light2);
     padding: 20px 0 20px 0;
-    font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
     color: var(--black);
 }
-.header .container{
+.fa-regular, .far {
+    color: var(--black);
+}
+.header .container {
     margin: auto;
     align-items: center;
 }
-.header a{
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 500;
-    color: var(--black);
-}
-.header h1,i{
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 500;
-    color: var(--black);
-}
+
 .icon-text {
     margin-left: 8px;
     color: var(--black);
 }
 
-
-
-.filter{
+.filter {
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
     padding-left: 20px;
     background-color: var(--light2);
     border-radius: 5px;
 }
-.searchbar .container{
-    padding: 40px 0px 0px 0px;
+
+.searchbar .container {
+    padding: 40px 0px;
 }
 
-.select-wrap{
+.select-wrap {
     background-color: var(--light1);
     border-radius: 5px;
 }
+
 .search input[type=text] {
     float: right;
     padding: 20px 15vw 20px 0;
     font-size: 17px;
     border: none;
 }
-.search-container{
+
+.search-container {
     background-color: var(--light2);
-    
 }
+
 .search-container button {
     background-color: var(--light2);
     padding: 20px 25px 20px 25px;
@@ -115,57 +112,42 @@ body.dark-mode {
     color: var(--black);
 }
 
-
-.countries{
-    padding-top: 40px;
+.clickcountry{
+    height: 50%;
 }
-
-.cuntriesInfo .container{
+.cuntriesInfo .container {
     width: 100%;
 }
 
-
-.country{
-    background-color: var(--light2);
-    height: 35vh;
-    box-sizing: border-box;
-    margin-bottom: 60px;
-    border-radius: 5px;
-    margin-right: 1px;
-    box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2);
-}
-.country h2,a{
+.card-body h2, a {
     font-weight: 600;
     font-size: 18px;
     color: var(--black);
     white-space: nowrap;
     overflow: hidden;
 }
-.country p{
-    font-size: 16px;
+
+.card-title {
     white-space: nowrap;
     overflow: hidden;
-    font-weight: 100;
-}
-
-.img-country{
-    height: 50%;
-}
-.img-country img{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    border-radius: 5px 5px 0 0;
-}
-.description{
-    padding: 22px 0px 0px 25px;
-}
-.country-title{
-    font-weight: 600;
     padding-bottom: 15px;
 }
-.bold{
-    font-weight: 500;
+
+.card {
+    background-color: var(--light2);
+    color: var(--black);
+    margin-bottom: 60px;
+    width: 100%;
+    height: 23rem;
+}
+
+.card-body p {
+    padding-bottom: 0.3rem;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -177,10 +159,10 @@ a#dropdownMenuLink {
     border-radius: 2px;
     padding: 20px 30px 20px 30px;
 }
+
 .dropdown-toggle::after {
     margin-left: 1.255em;
 }
-
 
 .dropdown-menu {
     width: -webkit-fill-available;
@@ -189,10 +171,12 @@ a#dropdownMenuLink {
     border-radius: 2px;
     background-color: var(--light2);
 }
-.dropdown .btn{
+
+.dropdown .btn {
     color: var(--black);
 }
-.dropdown-menu a{
+
+.dropdown-menu a {
     color: var(--black);
 }
 
@@ -204,43 +188,103 @@ button#dropdownMenuButton {
     border-radius: 2px;
     padding: 20px 30px 20px 30px;
 }
-.navbar{
+
+.navbar {
     color: var(--black);
+    border: none;
 }
-.input-group-prepend{
+
+.input-group-prepend {
     background-color: var(--light2);
     color: var(--light2);
-
 }
-.form-control{
+
+.form-control {
     border: none;
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
     padding-right: 18vw;
     background-color: var(--light2);
 }
-.form-control::placeholder{
+.form-control:focus {
+    box-shadow: none;
+    background-color: var(--light2);
+    color: var(--black);
+}
+.form-control::placeholder {
     color: var(--black);
 }
 
-.container .text-left{
+.container .text-left {
     width: auto;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     padding-left: 10px;
 }
-.dropdown{
+
+.dropdown {
     padding-top: 0.5rem;
 }
 
-
-@media (min-width: 0px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 94%;
-    }
+.card-text {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
+.row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+@media (min-width: 0px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+        padding: 0 60px;
+    }
+}
+@media (min-width: 992px){
+
+    .row>* {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .col-lg-3 {
+        width: 21%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .row-cols-md-3>* {
+        width: 30%;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px){
+    .d-flex {
+        display: flex!important;
+        flex-wrap: wrap;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .header a{
+        font-size: 18px;
+    }
+    .row-cols-sm-2>* {
+        flex: 0 0 auto;
+        width: 45%;
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .row {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
 @media (max-width: 576px){
     .d-flex {
         display: flex!important;
@@ -254,5 +298,19 @@ button#dropdownMenuButton {
     }
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0;
+        
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .card {
+        width: 80%;
+        margin-bottom: 45px;
+
+    }
+    .col-lg-3 {
+        display: flex;
+        justify-content: center;
     }
 }
